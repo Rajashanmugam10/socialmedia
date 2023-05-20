@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
         builder: (context, snapShot) {
           if (snapShot.connectionState == ConnectionState.active) {
             if (snapShot.hasData) {
-              return HomePage();
+              return const HomePage();
             } else if (snapShot.hasError) {
               return Center(
                 child: Text('${snapShot.error}'),

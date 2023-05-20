@@ -222,58 +222,58 @@ class _PublichomeState extends State<Publichome> {
                                                             ),
                                                           ],
                                                         ),
-                                                        // Text(data.docs[index]
-                                                        //     ['blog']),
-                                                        IconButton(
-                                                            onPressed: () =>
-                                                                Navigator.push(
-                                                                    context,
-                                                                    (MaterialPageRoute(
-                                                                        builder: (context) =>
-                                                                            Showpubliccomments(
-                                                                              name: Name,
-                                                                              photo: photo,
-                                                                              uid: uid,
-                                                                              postid: data.docs[index]['postid'],
-                                                                            )))),
-                                                            icon: const Icon(Icons
-                                                                .comment_rounded)),
-                                                        (FirebaseAuth
-                                                                    .instance
-                                                                    .currentUser!
-                                                                    .uid ==
-                                                                data.docs[index]
-                                                                    ['uid'])
-                                                            ? IconButton(
-                                                                onPressed: () {
-                                                                  FirebaseFirestore
-                                                                      .instance
-                                                                      .collection(
-                                                                          'public')
-                                                                      .doc(data.docs[
-                                                                              index]
-                                                                          [
-                                                                          'postid'])
-                                                                      .delete();
-                                                                  Fluttertoast
-                                                                      .showToast(
-                                                                          msg:
-                                                                              'post deleted');
-                                                                },
-                                                                icon:
-                                                                    const Icon(
-                                                                  Icons.delete,
-                                                                  color: Colors
-                                                                      .red,
-                                                                ))
-                                                            : (saved.contains(
-                                                                    saveid))
-                                                                ? const Text(
-                                                                    'data')
-                                                                : TextButton
-                                                                    .icon(
-                                                                        onPressed:
-                                                                            () {
+                                                        Row(
+                                                          children: [
+                                                            IconButton(
+                                                                onPressed: () => Navigator
+                                                                    .push(
+                                                                        context,
+                                                                        (MaterialPageRoute(
+                                                                            builder: (context) =>
+                                                                                Showpubliccomments(
+                                                                                  name: Name,
+                                                                                  photo: photo,
+                                                                                  uid: uid,
+                                                                                  postid: data.docs[index]['postid'],
+                                                                                )))),
+                                                                icon: const Icon(
+                                                                    Icons
+                                                                        .comment_rounded)),
+                                                            (FirebaseAuth
+                                                                        .instance
+                                                                        .currentUser!
+                                                                        .uid ==
+                                                                    data.docs[
+                                                                            index]
+                                                                        ['uid'])
+                                                                ? IconButton(
+                                                                    onPressed:
+                                                                        () {
+                                                                      FirebaseFirestore
+                                                                          .instance
+                                                                          .collection(
+                                                                              'public')
+                                                                          .doc(data.docs[index]
+                                                                              [
+                                                                              'postid'])
+                                                                          .delete();
+                                                                      Fluttertoast
+                                                                          .showToast(
+                                                                              msg: 'post deleted');
+                                                                    },
+                                                                    icon:
+                                                                        const Icon(
+                                                                      Icons
+                                                                          .delete,
+                                                                      color: Colors
+                                                                          .red,
+                                                                    ))
+                                                                : (saved.contains(
+                                                                        saveid))
+                                                                    ? const Text(
+                                                                        'data')
+                                                                    : TextButton.icon(
+                                                                        onPressed: () {
                                                                           FirebaseFirestore
                                                                               .instance
                                                                               .collection('users')
@@ -312,10 +312,10 @@ class _PublichomeState extends State<Publichome> {
                                                                           Fluttertoast.showToast(
                                                                               msg: 'saved');
                                                                         },
-                                                                        icon: const Icon(Icons
-                                                                            .save),
-                                                                        label: const Text(
-                                                                            'save')),
+                                                                        icon: const Icon(Icons.save),
+                                                                        label: const Text('save')),
+                                                          ],
+                                                        ),
                                                       ],
                                                     ),
                                                     children: [

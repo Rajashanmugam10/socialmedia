@@ -20,6 +20,7 @@ class _SavedState extends State<Saved> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('saved'),
+        backgroundColor: Colors.black,
         centerTitle: true,
       ),
       body: Center(

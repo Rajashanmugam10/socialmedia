@@ -176,10 +176,10 @@ class _ChatState extends State<Chat> {
                                                                         [
                                                                         'msg']),
                                                                 actions: [
-                                                                  FlatButton(
-                                                                    textColor:
-                                                                        Colors
-                                                                            .black,
+                                                                  TextButton(
+                                                                    // textColor:
+                                                                    //     Colors
+                                                                    //         .black,
                                                                     onPressed:
                                                                         () async {
                                                                       await FirebaseFirestore
@@ -205,10 +205,10 @@ class _ChatState extends State<Chat> {
                                                                               Colors.red),
                                                                     ),
                                                                   ),
-                                                                  FlatButton(
-                                                                    textColor:
-                                                                        Colors
-                                                                            .black,
+                                                                  TextButton(
+                                                                    // textColor:
+                                                                    //     Colors
+                                                                    //         .black,
                                                                     onPressed:
                                                                         () {
                                                                       Navigator.of(context).push(MaterialPageRoute(
@@ -258,8 +258,8 @@ class _ChatState extends State<Chat> {
                                                     content: Text(data
                                                         .docs[index]['msg']),
                                                     actions: [
-                                                      FlatButton(
-                                                        textColor: Colors.black,
+                                                      TextButton(
+                                                        // textColor: Colors.black,
                                                         onPressed: () async {
                                                           await FirebaseFirestore
                                                               .instance
@@ -282,8 +282,8 @@ class _ChatState extends State<Chat> {
                                                                   Colors.red),
                                                         ),
                                                       ),
-                                                      FlatButton(
-                                                        textColor: Colors.black,
+                                                      TextButton(
+                                                        // textColor: Colors.black,
                                                         onPressed: () {
                                                           Navigator.of(context).push(
                                                               MaterialPageRoute(

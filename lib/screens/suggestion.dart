@@ -80,6 +80,7 @@ class _SuggestionState extends State<Suggestion> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Suggestion'),
+        backgroundColor: Colors.black,
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -147,6 +148,7 @@ class _SuggestionState extends State<Suggestion> {
                                     color: Colors.blue,
                                     child: const Text('add intrest',
                                         style: TextStyle(
+                                          color: Colors.white,
                                           fontWeight: FontWeight.bold,
                                         )),
                                     shape: RoundedRectangleBorder(

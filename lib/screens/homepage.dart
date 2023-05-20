@@ -299,8 +299,7 @@ class _HomePageState extends State<HomePage> {
                               : Flexible(
                                   child: Container(
                                     height: double.infinity,
-                                    width: 80,
-                                    color: Colors.black,
+                                    width: 100,
                                     child: Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: Column(children: [
@@ -309,20 +308,32 @@ class _HomePageState extends State<HomePage> {
                                             child: ListView.builder(
                                                 itemCount: map.length,
                                                 itemBuilder: (context, index) {
-                                                  // last edited
                                                   return GestureDetector(
                                                     child: Padding(
                                                       padding:
                                                           const EdgeInsets.only(
-                                                              top: 15),
-                                                      child: Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .all(8.0),
-                                                        child: ClipOval(
-                                                          
-                                                          child: Text(v[index]
-                                                              .toString()),
+                                                              top: 16),
+                                                      child: Container(
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: Colors.black,
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(20),
+                                                        ),
+                                                        child: Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                  .all(8.0),
+                                                          child: Text(
+                                                            v[index].toString(),
+                                                            style:
+                                                                const TextStyle(
+                                                              color:
+                                                                  Colors.white,
+                                                              letterSpacing: .2,
+                                                            ),
+                                                          ),
                                                         ),
                                                       ),
                                                     ),

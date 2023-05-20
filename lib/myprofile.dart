@@ -1,4 +1,5 @@
 import 'package:circle/editprofile.dart';
+import 'package:circle/screens/singlepersonchat.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -55,19 +56,8 @@ class _ProfileState extends State<Profile> {
                           child: Column(
                             children: [
                               Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  const Padding(
-                                    padding: EdgeInsets.only(left: 20),
-                                    child: Text(
-                                      'profile',
-                                      textAlign: TextAlign.start,
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 24),
-                                    ),
-                                  ),
                                   Padding(
                                     padding: const EdgeInsets.all(8.0),
                                     child: MaterialButton(
@@ -95,7 +85,7 @@ class _ProfileState extends State<Profile> {
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: Card(
-                                        color: Colors.black,
+                                        // color: Colors.black,
                                         shape: RoundedRectangleBorder(
                                             borderRadius:
                                                 BorderRadius.circular(30)),
@@ -115,7 +105,7 @@ class _ProfileState extends State<Profile> {
                                               ),
                                               Text(bio,
                                                   style: const TextStyle(
-                                                      color: Colors.white,
+                                                      // color: Colors.white,
                                                       fontSize: 18,
                                                       fontWeight:
                                                           FontWeight.bold)),
@@ -131,7 +121,7 @@ class _ProfileState extends State<Profile> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsets.all(8.0),
+                                      padding: const EdgeInsets.all(18.0),
                                       child: CircleAvatar(
                                         maxRadius: 45,
                                         backgroundImage: NetworkImage(photo),
@@ -158,12 +148,16 @@ class _ProfileState extends State<Profile> {
                                       MediaQuery.of(context).size.width / 1.7,
                                   child: Column(
                                     children: [
-                                      const Text(
-                                        'Intrest',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontStyle: FontStyle.normal,
-                                            fontSize: 20),
+                                      const Padding(
+                                        padding: EdgeInsets.all(8.0),
+                                        child: Text(
+                                          'Intrest',
+                                          style: TextStyle(
+                                              letterSpacing: 3.5,
+                                              fontWeight: FontWeight.bold,
+                                              fontStyle: FontStyle.normal,
+                                              fontSize: 20),
+                                        ),
                                       ),
                                       Flexible(
                                         child: Card(
@@ -220,9 +214,9 @@ class _ProfileState extends State<Profile> {
                                   width: 20,
                                 ),
                                 Container(
-                                    height: 300,
+                                    height: 270,
                                     width: MediaQuery.of(context).size.height /
-                                        6.5,
+                                        5.6,
                                     child: Card(
                                       elevation: 30,
                                       color: Colors.blue[400],
@@ -230,11 +224,12 @@ class _ProfileState extends State<Profile> {
                                           borderRadius:
                                               BorderRadius.circular(50)),
                                       child: Padding(
-                                        padding: const EdgeInsets.all(10.0),
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 10),
                                         child: Column(
                                           children: const [
                                             Padding(
-                                              padding: EdgeInsets.all(8.0),
+                                              padding: EdgeInsets.all(9),
                                               child: Text(
                                                 'account verification status',
                                                 style: TextStyle(
@@ -247,7 +242,7 @@ class _ProfileState extends State<Profile> {
                                               height: 10,
                                             ),
                                             Text('''waiting for blue tik 
-                                            is in developing''')
+                                           this is in developing stage''')
                                           ],
                                         ),
                                       ),
@@ -259,10 +254,6 @@ class _ProfileState extends State<Profile> {
                         const SizedBox(
                           height: 20,
                         ),
-                        Container(
-                          height: 500,
-                          child: const Text('more to come'),
-                        )
                       ],
                     ),
                   );
